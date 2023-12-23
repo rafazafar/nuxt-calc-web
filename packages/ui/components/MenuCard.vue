@@ -1,0 +1,45 @@
+<template>
+  <div class="border-2 border-[#4976ba]">
+    <h3 class="bg-[#4976ba] text-white p-2 text-xl font-semibold">
+      <Icon
+        :name="icon"
+        class="text-4xl mr-2"
+      />{{title}}
+    </h3>
+    <div class="h-40 flex flex-col p-4">
+      <p class="grow">
+        {{ description }}
+      </p>
+      <nuxt-link :to="to">
+        <button class="bg-[#00008f] text-white py-3 px-6">
+          {{ buttonText }}<Icon
+            name="material-symbols:note-stack-add-outline"
+            class="ml-3 text-xl -rotate-90 -mt-1 cur"
+          />
+        </button>
+      </nuxt-link>
+    </div>
+  </div>
+</template>
+
+<script lang="ts" setup>
+defineProps({
+  title: {
+    type: String,
+    required: true
+  },
+  description:{
+    type: String,
+    default: '当年度の報酬計算の基礎となる業績データおよび支給額を月別に表示',
+  },
+  icon: {
+    type: String,
+    default: 'material-symbols:question-mark',
+  },
+  to: String,
+  buttonText:{
+    type: String,
+    default: '社員指定',
+  }
+})
+</script>

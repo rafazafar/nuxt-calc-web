@@ -1,0 +1,10 @@
+{
+  "name": "nuxt-calc-web-monorepo",
+  "private": true,
+  "scripts": {
+    "app": "pnpm packages @nuxt-monorepo/app",
+    "build": "pnpm -r build",
+    "packages": "pnpm --filter"
+  },
+  "packageManager": "pnpm@8.12.1"
+}

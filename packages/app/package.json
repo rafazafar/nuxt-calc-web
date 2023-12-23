@@ -1,0 +1,23 @@
+{
+  "name": "@nuxt-monorepo/app",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "devDependencies": {
+    "@nuxt-monorepo/ui": "workspace:^",
+    "@nuxt/devtools": "latest",
+    "@nuxtjs/tailwindcss": "latest",
+    "@vueuse/core": "^10.7.0",
+    "@vueuse/nuxt": "^10.7.0",
+    "nuxt": "^3.8.2",
+    "nuxt-icon": "^0.6.7",
+    "vue": "^3.3.12",
+    "vue-router": "^4.2.5"
+  }
+}
