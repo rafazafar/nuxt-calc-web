@@ -12,5 +12,5 @@
 <script lang="ts" setup>
 const { clear, message } = useCustomError();
 const errorPopup = ref(null);
-onClickOutside(errorPopup, (_) => clear());
+onClickOutside(errorPopup, event => clear());
 </script>

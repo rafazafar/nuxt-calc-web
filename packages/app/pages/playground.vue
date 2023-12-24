@@ -3,7 +3,7 @@
     <div class="grid gap-4 border-2 p-4">
       <p>Error stuff:</p>
       <button
-        class="btn btn-primary outline px-4 py-2"
+        class="btn btn-primary px-4 py-2 w-max"
         :disabled="isVisible"
         @click="show('This is a custom error message. Teehee')"
       >
@@ -25,26 +25,22 @@
       <button
         @click="refresh()"
         :disabled="pending"
-        class="btn btn-primary px-4 py-2"
+        class="btn btn-primary px-4 py-2 w-max"
       >
         Refetch
       </button>
 
-      <p>Status: {{ status }}</p>
+      <p
+        class="badge"
+        :class="{
+          'badge-warning': status === 'pending',
+          'badge-error': status === 'error',
+        }"
+      >
+        Status: {{ status }}
+      </p>
 
-      <div v-if="pending" class="animate-pulse">
-        <div class="grid grid-cols-3 gap-4 w-1/2">
-          <div class="h-2 bg-slate-200 rounded col-span-1"></div>
-          <div class="col-span-2"></div>
-          <div class="h-2 bg-slate-200 rounded col-span-3"></div>
-          <div class="h-2 bg-slate-200 rounded col-span-2"></div>
-          <div class="col-span-1"></div>
-          <div class="h-2 bg-slate-200 rounded col-span-2"></div>
-          <div class="col-span-1"></div>
-          <div class="h-2 bg-slate-200 rounded col-span-3"></div>
-          <div class="h-2 bg-slate-200 rounded col-span-3"></div>
-        </div>
-      </div>
+      <div v-if="pending" class="loading loading-dots loading-lg"></div>
       <div v-if="data && !pending">
         <div v-for="product in data.slice(0, 2)" :key="product.id">
           <h2>{{ product.title }}</h2>
@@ -58,8 +54,8 @@
 
 <script lang="ts" setup>
 useServerSeoMeta({
-  title: "🥳"
-})
+  title: "🥳",
+});
 const network = useNetwork();
 const { isVisible, show } = useCustomError();
 
@@ -69,5 +65,4 @@ const { data, pending, error, refresh, status } = useFetch<FakestoreProduct[]>(
     key: "fakestore_product",
   }
 );
-
 </script>

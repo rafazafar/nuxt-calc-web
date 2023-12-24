@@ -3,7 +3,7 @@
   "private": true,
   "scripts": {
     "app": "pnpm packages @nuxt-monorepo/app",
-    "build": "pnpm -r build",
+    "build": "pnpm app build",
     "packages": "pnpm --filter"
   },
   "packageManager": "pnpm@8.12.1"

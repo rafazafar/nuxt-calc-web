@@ -16,9 +16,9 @@ module.exports = {
           "accent-focus": "#41be88",
           "accent-content": "#161827",
 
-          neutral: "#f5f5f5",
-          "neutral-focus": "#e6e5e5",
-          "neutral-content": "#212121",
+          neutral: "#161827",
+          "neutral-focus": "#06060a",
+          "neutral-content": "#eaf0f6",
 
           "base-100": "#ffffff",
           "base-200": "#f7fafd",
@@ -34,10 +34,12 @@ module.exports = {
           "--rounded-btn": "0rem",
           "--rounded-badge": "0rem",
 
-          "--animation-btn": "0",
-          "--animation-input": "0",
+          "--animation-btn": 0,
+          "--animation-input": 0,
 
           "--btn-text-case": "uppercase",
+          "--btn-focus-scale": 1,
+          "--btn-active-scale": 1,
           "--navbar-padding": "0.5rem",
           "--border-btn": "1px",
         },

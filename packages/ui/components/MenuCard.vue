@@ -1,6 +1,6 @@
 <template>
-  <div class="border-2 border-[#4976ba]">
-    <h3 class="bg-[#4976ba] text-white p-2 text-xl font-semibold">
+  <div class="border-2 border-secondary">
+    <h3 class="bg-secondary p-2 text-xl font-semibold text-secondary-content">
       <Icon
         :name="icon"
         class="text-4xl mr-2"
@@ -11,7 +11,7 @@
         {{ description }}
       </p>
       <nuxt-link :to="to">
-        <button class="btn btn-parimary py-3 px-6">
+        <button class="btn btn-primary py-3 px-6">
           {{ buttonText }}<Icon
             name="material-symbols:note-stack-add-outline"
             class="ml-3 text-xl -rotate-90 -mt-1 cur"
