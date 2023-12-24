@@ -1,7 +1,4 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
-import { createResolver } from "@nuxt/kit";
-const { resolve } = createResolver(import.meta.url);
-
 export default defineNuxtConfig({
   // Monorepo stuff
   extends: ["@nuxt-monorepo/ui"],
@@ -13,6 +10,7 @@ export default defineNuxtConfig({
   },
   // Configurations
   nitro: {
+    preset: 'aws-lambda',
     routeRules: {
       "/api/**": {
         proxy: process.env.API_HOST ?? "https://fakestoreapi.com/**",
