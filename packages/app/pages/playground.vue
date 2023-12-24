@@ -14,7 +14,9 @@
     <ClientOnly>
       <div class="border-2 p-4">
         <p>Network Status:</p>
-        <pre>{{ network }}</pre>
+        <div class="mockup-code">
+          <pre data-prefix="$"><code>{{ network }}</code></pre>
+        </div>
       </div>
     </ClientOnly>
 
@@ -55,6 +57,9 @@
 </template>
 
 <script lang="ts" setup>
+useServerSeoMeta({
+  title: "🥳"
+})
 const network = useNetwork();
 const { isVisible, show } = useCustomError();
 

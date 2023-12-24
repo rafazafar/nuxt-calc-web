@@ -1,7 +1,7 @@
 <template>
   <div
     ref="errorPopup"
-    class="fixed left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-red-100 text-red-700 p-6 py-3"
+    class="fixed z-50 left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-red-100 text-red-700 p-6 py-3"
   >
     <p class="font-bold">Error</p>
     <p class="text-sm">{{ message }}</p>

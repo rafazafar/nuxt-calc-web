@@ -8,7 +8,9 @@ export default defineNuxtConfig({
   devtools: {
     enabled: true,
   },
-
+  devServer:{
+    port: 3001
+  },
   // Configurations
   nitro: {
     routeRules: {
@@ -18,7 +20,7 @@ export default defineNuxtConfig({
     },
   },
   
-  modules: ["@nuxtjs/tailwindcss", "nuxt-icon", "@vueuse/nuxt"],
+  modules: ["nuxt-icon", "@vueuse/nuxt"],
   app: {
     // pageTransition: { name: "page", mode: "out-in" },
     head:{
