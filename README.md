@@ -11,10 +11,16 @@ Just some components using Tailwind and DaisyUI
 
 ### app
 The actual app, which extends/consumes the UI layer.
+App/server is where the server resides. Currently its using nitro proxy instead of creating each endpoint
 
 ## Setup
 
-Make sure to install the dependencies:
+1) Install VSCode plugin `Volar`, `Goto-alias` and `Nuxtr`
+
+2) In VSCode, Search for `@builtin TypeScript and JavaScript Language Features` extension. And Disable(workspace). Reload VSCode
+
+
+3) Make sure to install the dependencies:
 
 ```bash
 # pnpm

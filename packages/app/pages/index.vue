@@ -19,11 +19,6 @@
   </div>
 </template>
 <script setup lang="ts">
-useSeoMeta({
-  title: "Home",
-  description: "ログインユーザー別に使用できるメニューを表示しています",
-})
-
 const devMenu = [
   {
     title: "Playground",
