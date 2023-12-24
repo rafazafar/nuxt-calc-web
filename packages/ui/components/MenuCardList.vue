@@ -14,7 +14,7 @@
   </section>
 </template>
 <script setup lang="ts">
-const props = defineProps<{
+defineProps<{
   title: string;
   menuItems: {
     title: string;

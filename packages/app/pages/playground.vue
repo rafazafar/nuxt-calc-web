@@ -3,8 +3,8 @@
     <div class="grid gap-4 border-2 p-4">
       <p>Error stuff:</p>
       <button
-        class="cursor-pointer outline px-4 py-2"
-        :class="{ 'outline-red-500 rounded': isVisible }"
+        class="btn btn-primary outline px-4 py-2"
+        :disabled="isVisible"
         @click="show('This is a custom error message. Teehee')"
       >
         Trigger popup error
@@ -25,7 +25,7 @@
       <button
         @click="refresh()"
         :disabled="pending"
-        class="cursor-pointer outline px-4 py-2"
+        class="btn btn-primary px-4 py-2"
       >
         Refetch
       </button>

@@ -11,7 +11,7 @@
         {{ description }}
       </p>
       <nuxt-link :to="to">
-        <button class="bg-[#00008f] text-white py-3 px-6">
+        <button class="btn btn-parimary py-3 px-6">
           {{ buttonText }}<Icon
             name="material-symbols:note-stack-add-outline"
             class="ml-3 text-xl -rotate-90 -mt-1 cur"

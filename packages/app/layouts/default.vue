@@ -3,7 +3,7 @@
     <NuxtLoadingIndicator  />
     <ErrorPopup ref="errorPopup" v-if="useCustomError().isVisible.value"/>
     <Header/>
-    <div class="px-4 xl:px-0 max-w-6xl mx-auto py-4 px-1">
+    <div class="px-4 xl:px-0 max-w-6xl mx-auto py-4">
       <slot />
     </div>
   </div>
