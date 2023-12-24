@@ -9,9 +9,11 @@
 
     <LazyMenuCardList title="業務機能" :menuItems="businessMenu" />
 
-    <hr class="h-px my-2 bg-gray-400 border-0" />
-
+    <hr class="h-px my-2 bg-gray-400" />
+    
     <LazyMenuCardList title="業務機能" :menuItems="headOfficeMenu" />
+    
+    <hr class="h-px my-2 bg-gray-400" />
     
     <DevOnly>
       <LazyMenuCardList title="DevOnly" :menuItems="devMenu" />
