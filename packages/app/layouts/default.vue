@@ -13,7 +13,7 @@
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 const { employeeName, employeeNo } = useAuth();
 </script>
 

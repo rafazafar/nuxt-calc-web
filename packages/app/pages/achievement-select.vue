@@ -33,9 +33,5 @@
   </div>
 </template>
 <script setup lang="ts">
-const targetPaymentYMOptions = [
-  '2023年03月',
-  '2023年02月',
-  '2023年01月',
-]
+const targetPaymentYMOptions = ["2023年03月", "2023年02月", "2023年01月"];
 </script>

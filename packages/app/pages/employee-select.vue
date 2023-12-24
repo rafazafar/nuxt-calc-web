@@ -1,5 +1,3 @@
 <template>
-  <div>
-    TODO: Some form ui
-  </div>
+  <div>TODO: Some form ui</div>
 </template>
