@@ -24,7 +24,7 @@ export default defineNuxtConfig({
   app: {
     // pageTransition: { name: "page", mode: "out-in" },
     head:{
-      titleTemplate: "%s - Nuxt Calc-Web Monorepo",
+      titleTemplate: "CCI/FA Calc Nuxt Monorepo",
     }
   },
 

@@ -12,8 +12,8 @@ module.exports = {
           "secondary-focus": "#385785",
           "secondary-content": "#ebf1fa",
 
-          accent: "#1cc54e",
-          "accent-focus": "#41be88",
+          accent: "#e4eaf5",
+          "accent-focus": "#c8d5ea",
           "accent-content": "#161827",
 
           neutral: "#161827",
@@ -41,7 +41,7 @@ module.exports = {
           "--btn-focus-scale": 1,
           "--btn-active-scale": 1,
           "--navbar-padding": "0.5rem",
-          "--border-btn": "1px",
+          "--border-btn": "2px",
         },
       },
     ],

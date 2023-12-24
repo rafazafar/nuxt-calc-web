@@ -13,8 +13,8 @@
       <nuxt-link :to="to">
         <button class="btn btn-primary py-3 px-6">
           {{ buttonText }}<Icon
-            name="material-symbols:note-stack-add-outline"
-            class="ml-3 text-xl -rotate-90 -mt-1 cur"
+            name="material-symbols:open-in-new"
+            class="ml-3 text-xl"
           />
         </button>
       </nuxt-link>
