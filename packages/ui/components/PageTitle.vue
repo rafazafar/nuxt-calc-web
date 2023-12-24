@@ -1,15 +1,15 @@
 <template>
   <div>
-    <div class="flex gap-3 mb-3">
-      <div class="w-2 min-h-full bg-secondary"></div>
-      <h1 class="text-2xl md:text-4xl font-bold">{{title}}</h1>
+    <div class="mb-3 flex gap-3">
+      <div class="min-h-full w-2 bg-secondary"></div>
+      <h1 class="text-2xl font-bold md:text-4xl">{{ title }}</h1>
     </div>
     <h2>
       {{ description }}
-      <slot/>
+      <slot />
     </h2>
   </div>
 </template>
 <script setup lang="ts">
-defineProps<{title: string, description?:string}>();
+defineProps<{ title: string; description?: string }>();
 </script>

@@ -6,14 +6,11 @@
           ><img src="/logo.png" alt="logo" class="h-14 w-14 object-cover"
         /></nuxt-link>
 
-        <div class="px-2 text-primary grow font-bold self-center">
-          支社長・営業所長報酬サポートツール
+        <div class="px-2 text-primary font-bold grow self-center">
+          {{ siteTitle ?? 'Site Title' }}
         </div>
 
-        <Icon
-          name="ic:sharp-person"
-          class="text-3xl self-center"
-        />
+        <Icon name="ic:sharp-person" class="text-3xl self-center" />
 
         <div class="self-center tracking-wide align-text-bottom font-light">
           {{ employeeNo }} | {{ employeeName }} 太郎
@@ -25,5 +22,9 @@
 </template>
 
 <script setup lang="ts">
-const { employeeName, employeeNo } = useAuth();
+defineProps<{
+  employeeNo: string;
+  employeeName: string;
+  siteTitle?: string;
+}>();
 </script>
