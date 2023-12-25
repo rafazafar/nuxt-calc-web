@@ -75,15 +75,14 @@
         </div>
       </div>
 
-      <div class="divider mt-1 divider-accent">
+      <div class="divider mt-1 divider-accent  cursor-pointer" @click="collapsed = !collapsed">
         <Icon
           :name="
             collapsed
               ? 'material-symbols:keyboard-double-arrow-down-rounded'
               : 'material-symbols:keyboard-double-arrow-up-rounded'
           "
-          class="text-4xl cursor-pointer"
-          @click="collapsed = !collapsed"
+          class="text-4xl"
         />
       </div>
     </div>
