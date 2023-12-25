@@ -19,5 +19,8 @@
     "prettier-plugin-tailwindcss": "^0.5.9",
     "vue": "^3.3.10",
     "vue-router": "^4.2.5"
+  },
+  "dependencies": {
+    "@formkit/auto-animate": "^0.8.1"
   }
 }

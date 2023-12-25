@@ -40,6 +40,7 @@ module.exports = {
           "--btn-text-case": "uppercase",
           "--btn-focus-scale": 1,
           "--btn-active-scale": 1,
+
           "--navbar-padding": "0.5rem",
           "--border-btn": "2px",
         },

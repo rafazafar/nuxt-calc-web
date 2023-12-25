@@ -36,6 +36,10 @@ importers:
         version: 4.2.5(vue@3.3.13)
 
   packages/ui:
+    dependencies:
+      '@formkit/auto-animate':
+        specifier: ^0.8.1
+        version: 0.8.1
     devDependencies:
       '@nuxtjs/tailwindcss':
         specifier: ^6.10.1
@@ -866,6 +870,10 @@ packages:
     resolution: {integrity: sha512-+KpH+QxZU7O4675t3mnkQKcZZg56u+K/Ct2K+N2AZYNVK8kyeo/bI18tI8aPm3tvNNRyTWfj6s5tnGNlcbQRsA==}
     engines: {node: '>=14'}
     dev: true
+
+  /@formkit/auto-animate@0.8.1:
+    resolution: {integrity: sha512-0/Z2cuNXWVVIG/l0SpcHAWFhGdvLJ8DRvEfRWvmojtmRWfEy+LWNwgDazbZqY0qQYtkHcoEK3jBLkhiZaB/4Ig==}
+    dev: false
 
   /@iconify/collections@1.0.373:
     resolution: {integrity: sha512-LBuRqoeS1mzFOFPIMNO2J6UyOoJlut7GP2mmoCT3LECKFWdOV1VZwjpkoxrtkEDM3B3SEBLwE+naSlunQmBg5A==}
