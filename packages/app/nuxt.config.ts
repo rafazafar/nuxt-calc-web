@@ -10,7 +10,7 @@ export default defineNuxtConfig({
   },
   // Configurations
   nitro: {
-    preset: 'aws-lambda',
+    preset: 'vercel',
     routeRules: {
       "/api/**": {
         proxy: process.env.API_HOST ?? "https://fakestoreapi.com/**",
