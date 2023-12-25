@@ -46,6 +46,9 @@ importers:
       nuxt:
         specifier: ^3.8.2
         version: 3.8.2(vite@5.0.10)
+      nuxt-icon:
+        specifier: ^0.6.7
+        version: 0.6.7(nuxt@3.8.2)(vite@5.0.10)(vue@3.3.13)
       prettier:
         specifier: ^3.1.1
         version: 3.1.1
