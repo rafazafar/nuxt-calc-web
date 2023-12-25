@@ -93,7 +93,7 @@
           title="確定実績(明細)照会"
           description="管理職の当年度の業績データおよび支給額を月別に表示しています。"
         />
-        <div class="flex gap-4 items-center">
+        <div class="flex flex-wrap gap-4 items-center">
           <p class="text-2xl font-semibold">表示年度</p>
           <select name="year-selector" class="select select-bordered grow">
             <option>2021年度</option>
