@@ -21,7 +21,7 @@
         />
       </div>
     </div>
-    <div class="flex min-w-[30%] items-center justify-end px-4 py-1 text-right">
+    <div class="flex min-w-[33%] items-center justify-end px-4 py-1 text-right">
       <div>{{ value }}</div>
     </div>
   </div>

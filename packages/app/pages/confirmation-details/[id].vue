@@ -7,7 +7,7 @@
       <div v-else class="flex flex-col gap-2 max-w-7xl mx-auto">
         <div class="grid md:grid-cols-[1fr_7fr]">
           <p class="p-2 font-semibold">基本情報</p>
-          <div class="grid grid-cols-6 gap-2">
+          <div class="grid md:grid-cols-6 gap-2">
             <AccentedKV
               class="col-span-2"
               label="局"
