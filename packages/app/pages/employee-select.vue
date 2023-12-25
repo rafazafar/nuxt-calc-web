@@ -1,6 +1,6 @@
 <template>
   <div class="grid content-center justify-center">
-    <div class="border border-primary mt-4">
+    <div class="border-2 border-primary mt-4">
       <h1
         class="p-2 px-6 bg-primary text-primary-content text-2xl font-semibold"
       >
@@ -93,7 +93,7 @@
               <p class="font-light">21366431 | AXA 太郎</p>
             </div>
           </div>
-          <button class="btn btn-primary">次へ進む</button>
+          <button class="btn btn-primary" @click="handleSubmit">次へ進む</button>
         </div>
       </div>
     </div>
@@ -106,5 +106,9 @@ const selectedManagerType = useState("managerType", () => "branchManager");
 
 const handleEmployeeNumberInput = () => {
   alert(inputEmployeeNumber.value);
+};
+
+const handleSubmit = () => {
+  useRouter().push("/confirmation-details/64268070");
 };
 </script>

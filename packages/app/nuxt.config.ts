@@ -19,8 +19,10 @@ export default defineNuxtConfig({
   },
   
   modules: ["nuxt-icon", "@vueuse/nuxt"],
-  app: {
-    // pageTransition: { name: "page", mode: "out-in" },
+  css: ["~/assets/css/main.css"],
+  app:{
+    pageTransition: { name: "page", mode: "out-in" },
+    layoutTransition: { name: 'layout', mode: 'out-in' },
     head:{
       titleTemplate: "CCI/FA Calc Nuxt Monorepo",
     }
