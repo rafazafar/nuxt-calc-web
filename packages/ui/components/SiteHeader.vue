@@ -10,9 +10,9 @@
           {{ siteTitle ?? 'Site Title' }}
         </div>
 
-        <Icon name="ic:sharp-person" class="text-3xl self-center" />
+        <Icon name="ic:sharp-person" class="mr-2 md:mr-0 text-3xl self-center" />
 
-        <div class="self-center tracking-wide align-text-bottom font-light">
+        <div class="hidden md:block self-center tracking-wide align-text-bottom font-light">
           {{ employeeNo }} | {{ employeeName }} 太郎
         </div>
       </div>

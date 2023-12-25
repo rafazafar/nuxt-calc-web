@@ -44,6 +44,9 @@ importers:
       '@nuxtjs/tailwindcss':
         specifier: ^6.10.1
         version: 6.10.1
+      '@tanstack/vue-table':
+        specifier: ^8.11.2
+        version: 8.11.2(vue@3.3.13)
       daisyui:
         specifier: ^4.4.23
         version: 4.4.23(postcss@8.4.32)
@@ -1807,6 +1810,21 @@ packages:
   /@sindresorhus/merge-streams@1.0.0:
     resolution: {integrity: sha512-rUV5WyJrJLoloD4NDN1V1+LDMDWOa4OTsT4yYJwQNpTU6FWxkxHpL7eu4w+DmiH8x/EAM1otkPE1+LaspIbplw==}
     engines: {node: '>=18'}
+    dev: true
+
+  /@tanstack/table-core@8.11.2:
+    resolution: {integrity: sha512-rR0VEQOtr0ARLvaNLaSQnt2BVwOp0OavOUA0LcZ3N45tLYXc4sXruNv8kJ7R7+5W1CrzGha217tzjBG83CpoMQ==}
+    engines: {node: '>=12'}
+    dev: true
+
+  /@tanstack/vue-table@8.11.2(vue@3.3.13):
+    resolution: {integrity: sha512-xAQA3twDaCLAKYxF3u7mOXTyhD51Rh9lsSqs/CS05auMGV0ajC4+1X7inMjc9uqb7qSaM7T1OUoQlj/kv1raSQ==}
+    engines: {node: '>=12'}
+    peerDependencies:
+      vue: ^3.2.33
+    dependencies:
+      '@tanstack/table-core': 8.11.2
+      vue: 3.3.13
     dev: true
 
   /@trysound/sax@0.2.0:

@@ -2,7 +2,7 @@
   <div class="grid gap-4">
     <div class="border-2 p-4">
       <p>Error stuff:</p>
-      <div class="flex gap-4">
+      <div class="flex gap-4 flex-wrap">
         <button
           class="btn btn-primary"
           :disabled="isVisible"

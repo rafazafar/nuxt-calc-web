@@ -15,9 +15,7 @@
 
     <hr class="h-px my-2 bg-gray-400" />
 
-    <DevOnly>
-      <LazyMenuCardList title="DevOnly" :menuItems="devMenu" />
-    </DevOnly>
+    <LazyMenuCardList title="DevOnly" :menuItems="devMenu" />
   </div>
 </template>
 <script setup lang="ts">
