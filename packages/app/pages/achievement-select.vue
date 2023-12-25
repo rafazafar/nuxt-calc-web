@@ -27,7 +27,7 @@
             <option selected>東京支社</option>
           </select>
         </div>
-        <button class="btn btn-primary">次へ進む</button>
+        <nuxt-link to="/achievements"><button class="btn btn-primary">次へ進む</button></nuxt-link>
       </div>
     </div>
   </div>
