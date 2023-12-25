@@ -7,26 +7,28 @@
         社員指定
       </h1>
       <div class="p-4">
-        <form>
-          <h3 class="font-semibold text-xl">直接入力</h3>
-          <h4>社員番号</h4>
-          <div class="flex gap-4">
-            <input
-              type="text"
-              class="input input-bordered"
-              placeholder="社員番号"
-              v-model="inputEmployeeNumber"
-            />
-            <button
-              type="button"
-              class="btn btn-primary btn-outline px-8 disabled:bg-white"
-              :disabled="inputEmployeeNumber === ''"
-              @click="handleEmployeeNumberInput"
-            >
-              指定
-            </button>
-          </div>
-        </form>
+        <ClientOnly>
+          <form>
+            <h3 class="font-semibold text-xl">直接入力</h3>
+            <h4>社員番号</h4>
+            <div class="flex gap-4">
+              <input
+                type="text"
+                class="input input-bordered"
+                placeholder="社員番号"
+                v-model="inputEmployeeNumber"
+              />
+              <button
+                type="button"
+                class="btn btn-primary btn-outline px-8 disabled:bg-white"
+                :disabled="inputEmployeeNumber === ''"
+                @click="handleEmployeeNumberInput"
+              >
+                指定
+              </button>
+            </div>
+          </form>
+        </ClientOnly>
         <div class="divider divider-neutral-content text-sm">または</div>
         <div class="flex flex-col gap-4" v-auto-animate>
           <div>
@@ -93,7 +95,9 @@
               <p class="font-light">21366431 | AXA 太郎</p>
             </div>
           </div>
-          <button class="btn btn-primary" @click="handleSubmit">次へ進む</button>
+          <button class="btn btn-primary" @click="handleSubmit">
+            次へ進む
+          </button>
         </div>
       </div>
     </div>
@@ -105,7 +109,7 @@ const inputEmployeeNumber = useState("inputEmployeeNumber", () => "");
 const selectedManagerType = useState("managerType", () => "branchManager");
 
 const handleEmployeeNumberInput = () => {
-  alert(inputEmployeeNumber.value);
+  window.location.href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
 };
 
 const handleSubmit = () => {

@@ -29,20 +29,20 @@ const devMenu = [
     icon: "material-symbols-light:developer-mode-tv",
     buttonText: "Go to Playground",
   },
-  {
-    title: "TSX Page",
-    description: "TSX in Vue? Rly? Yes",
-    to: "/tsx",
-    icon: "material-symbols-light:developer-mode-tv",
-    buttonText: "Go to TSX Page",
-  },
-  {
-    title: "Hyperscript Page",
-    description: "Witten in hyperscript. Yukk",
-    to: "/hyperscript",
-    icon: "material-symbols-light:developer-mode-tv",
-    buttonText: "Go to H",
-  },
+  // {
+  //   title: "TSX Page",
+  //   description: "TSX in Vue? Rly? Yes",
+  //   to: "/tsx",
+  //   icon: "material-symbols-light:developer-mode-tv",
+  //   buttonText: "Go to TSX Page",
+  // },
+  // {
+  //   title: "Hyperscript Page",
+  //   description: "Witten in hyperscript. Yukk",
+  //   to: "/hyperscript",
+  //   icon: "material-symbols-light:developer-mode-tv",
+  //   buttonText: "Go to H",
+  // },
 ];
 const businessMenu = [
   {
