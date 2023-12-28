@@ -70,8 +70,10 @@ useServerSeoMeta({
 const network = useNetwork();
 const { isVisible, show } = useCustomError();
 
+
+
 const { data, pending, error, refresh, status } = useFetch<FakestoreProduct[]>(
-  "/api/products",
+  "/api/fakestore/products",
   { key: "fakestore_product" }
 );
 </script>

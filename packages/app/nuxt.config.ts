@@ -11,11 +11,6 @@ export default defineNuxtConfig({
   // Configurations
   nitro: {
     preset: 'vercel',
-    routeRules: {
-      "/api/**": {
-        proxy: process.env.API_HOST ?? "https://fakestoreapi.com/**",
-      },
-    },
   },
   
   modules: ["nuxt-icon", "@vueuse/nuxt"],

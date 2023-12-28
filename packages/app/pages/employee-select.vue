@@ -109,10 +109,10 @@ const inputEmployeeNumber = useState("inputEmployeeNumber", () => "");
 const selectedManagerType = useState("managerType", () => "branchManager");
 
 const handleEmployeeNumberInput = () => {
-  window.location.href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
+  navigateTo("https://www.youtube.com/watch?v=dQw4w9WgXcQ", {external: true})
 };
 
 const handleSubmit = () => {
-  useRouter().push("/confirmation-details/64268070");
+  navigateTo("/confirmation-details/64268070");
 };
 </script>

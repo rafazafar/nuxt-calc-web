@@ -102,6 +102,8 @@
           </select>
         </div>
       </div>
+
+      <TableAchievementsElementTable />
     </div>
   </div>
 </template>
