@@ -3,10 +3,12 @@
     <PageTitle :title="pageTitle" :description="pageDescription" />
     <p class="font-semibold text-xl">支給年月: {{ "2022年3月" }}</p>
     <div class="overflow-x-auto"></div>
-    <h2 class="text-xl mt-4">ElementPlus Table:</h2>
-    <TableAchievementsElementTable />
-    <h2 class="text-xl mt-4">React Table:</h2>
-    <TableAchievementsReactTable :table-data="first5"/>
+    <ClientOnly>
+      <h2 class="text-xl mt-4">ElementPlus Table:</h2>
+      <TableAchievementsElementTable />
+      <h2 class="text-xl mt-4">React Table:</h2>
+      <TableAchievementsReactTable :table-data="first5" />
+    </ClientOnly>
   </div>
 </template>
 
