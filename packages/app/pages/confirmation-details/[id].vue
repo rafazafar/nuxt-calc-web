@@ -103,7 +103,9 @@
         </div>
       </div>
 
-      <!-- <TableAchievementsElementTable :tableData="data" /> -->
+      <div :class="{'h-[70vh]': collapsed , 'h-[50vh]': !collapsed}">
+        <TableAchievementsElementTable :tableData="data"/>
+      </div>
     </div>
   </div>
 </template>
