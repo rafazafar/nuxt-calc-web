@@ -7,7 +7,7 @@
       :employeeNo="employeeNo"
       :employeeName="employeeName"
     />
-    <div class="px-4 xl:px-0 max-w-6xl mx-auto py-4">
+    <div class="px-4 xl:px-4 max-w-7xl mx-auto py-4">
       <slot />
     </div>
   </div>

@@ -6,7 +6,7 @@
       >
         職制・支給年月選択
       </h1>
-      <div class="grid gap-4 p-12 pt-6">
+      <div class="grid gap-4 p-6 pt-3">
         <div>
           <h3 class="text-lg font-semibold mb-1">対象支給年月</h3>
           <select class="select select-bordered w-full">

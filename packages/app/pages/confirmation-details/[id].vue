@@ -103,7 +103,7 @@
         </div>
       </div>
 
-      <TableAchievementsElementTable />
+      <!-- <TableAchievementsElementTable :tableData="data" /> -->
     </div>
   </div>
 </template>
@@ -116,4 +116,9 @@ const collapsed = ref(false);
 const placeholderHelpMessage =
   "営業管理職の2022年度の保障額は、7月~12月までの期間の保障額になるため、表示金額の50%となります";
 const id = useRoute().params.id;
+
+const { data, pending } = useFetch<any>(
+  "/api/achievements",
+  { key: "achievementsData" }
+);
 </script>
