@@ -8,10 +8,6 @@ export default defineNuxtConfig({
   devServer:{
     port: 3001
   },
-  // Configurations
-  nitro: {
-    preset: 'vercel',
-  },
   
   modules: ["nuxt-icon", "@vueuse/nuxt"],
   css: ["~/assets/css/main.css"],

@@ -1,0 +1,11 @@
+main = "./.output/server/index.mjs"
+workers_dev = true
+compatibility_date = "2023-10-02"
+
+name = "calc-web"
+routes = [
+  { pattern = "calc-web.zafar.dev/*", zone_name = "zafar.dev" }
+]
+
+[site]
+bucket = ".output/public"

@@ -4,10 +4,13 @@
   "type": "module",
   "scripts": {
     "build": "nuxt build",
+    "build:cloudflare": "NITRO_PRESET=cloudflare nuxt build",
+    "build:vercel": "NITRO_PRESET=vercel nuxt build",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "deploy:cloudflare": "rm -rf .output .wrangler && pnpm run build:cloudflare && wrangler deploy --env production"
   },
   "devDependencies": {
     "@element-plus/nuxt": "^1.0.7",
@@ -19,6 +22,7 @@
     "nuxt": "^3.9.0",
     "nuxt-icon": "^0.6.7",
     "vue": "^3.3.12",
-    "vue-router": "^4.2.5"
+    "vue-router": "^4.2.5",
+    "wrangler": "^3.18.0"
   }
 }

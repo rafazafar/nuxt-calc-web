@@ -6,18 +6,12 @@
       </div>
       <div
         class="tooltip"
-        :class="{ 'tooltip-open': showHelpMessage }"
         :data-tip="helpMessage"
         v-if="helpMessage"
       >
         <Icon
           class="-mt-1 ml-1 cursor-pointer"
-          :name="
-            showHelpMessage
-              ? 'material-symbols:info'
-              : 'material-symbols:info-outline'
-          "
-          @click="showHelpMessage = !showHelpMessage"
+          name="material-symbols:info-outline"
         />
       </div>
     </div>
