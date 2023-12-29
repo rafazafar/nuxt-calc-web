@@ -1,5 +1,9 @@
 export default () => {
-  const achievementTableStructure: { columns: TableColumn[] } = {
+  const achievementTableStructure: {
+    defaultWidth?: string;
+    columns: TableColumn[];
+  } = {
+    defaultWidth: "110px",
     columns: [
       {
         label: "社員情報",
@@ -8,18 +12,21 @@ export default () => {
           {
             label: "営業局名",
             prop: "employee.regionName",
+            width: "",
           },
           {
             label: "支社名",
             prop: "employee.branchName",
+            width: "",
           },
           {
             label: "社員番号",
+            width: "",
           },
           {
             label: "社員名",
             prop: "employee.employeeName",
-            width: "150px",
+            width: "120px",
           },
         ],
       },
@@ -105,5 +112,5 @@ export default () => {
       },
     ],
   };
-  return {achievementTableStructure};
+  return { achievementTableStructure };
 };

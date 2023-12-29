@@ -7,20 +7,20 @@
     sum-text="支社合計"
   >
     <el-table-column
-    v-for="column in tableStructure.columns"
-    :prop="column.prop"
-    :label="column.label"
-    :width="column.width ?? '100px'"
-    :fixed="column.fixed"
-  >
-    <el-table-column
-      v-for="subColumn in column.columns"
-      :prop="subColumn.prop"
-      :label="subColumn.label"
-      :width="subColumn.width ?? '100px'"
-      :fixed="subColumn.fixed"
-    />
-  </el-table-column>
+      v-for="column in tableStructure.columns"
+      :prop="column.prop"
+      :label="column.label"
+      :width="column.width ?? columnDefaultWidth"
+      :fixed="column.fixed"
+    >
+      <el-table-column
+        v-for="subColumn in column.columns"
+        :prop="subColumn.prop"
+        :label="subColumn.label"
+        :width="subColumn.width ?? columnDefaultWidth"
+        :fixed="subColumn.fixed"
+      />
+    </el-table-column>
   </el-table>
 </template>
 
@@ -28,12 +28,11 @@
 import type { CellStyle } from "element-plus";
 import type { TableColumn } from "./types";
 
-defineProps<{
+const props = defineProps<{
   tableData: any[];
-  tableStructure: { columns: TableColumn[] };
+  tableStructure: { defaultWidth?: string; columns: TableColumn[] };
 }>();
-const { isMobile } = useDevice();
-
+const columnDefaultWidth = props.tableStructure.defaultWidth ?? "110px";
 const customHeaderStyle = (data: any): CellStyle<any> => {
   return data.rowIndex == 1
     ? { "background-color": "#f2f6fc", color: "black" }
