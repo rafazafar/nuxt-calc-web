@@ -45,20 +45,16 @@ importers:
         version: 3.22.1
 
   packages/ui:
-    dependencies:
-      '@formkit/auto-animate':
-        specifier: ^0.8.1
-        version: 0.8.1
     devDependencies:
       '@element-plus/nuxt':
         specifier: ^1.0.7
         version: 1.0.7(@element-plus/icons-vue@2.3.1)(element-plus@2.4.4)
+      '@formkit/auto-animate':
+        specifier: ^0.8.1
+        version: 0.8.1
       '@nuxtjs/tailwindcss':
         specifier: ^6.10.1
         version: 6.10.1
-      '@tanstack/vue-table':
-        specifier: ^8.11.2
-        version: 8.11.2(vue@3.3.13)
       daisyui:
         specifier: ^4.4.23
         version: 4.4.24(postcss@8.4.32)
@@ -1013,7 +1009,7 @@ packages:
 
   /@formkit/auto-animate@0.8.1:
     resolution: {integrity: sha512-0/Z2cuNXWVVIG/l0SpcHAWFhGdvLJ8DRvEfRWvmojtmRWfEy+LWNwgDazbZqY0qQYtkHcoEK3jBLkhiZaB/4Ig==}
-    dev: false
+    dev: true
 
   /@iconify/collections@1.0.373:
     resolution: {integrity: sha512-LBuRqoeS1mzFOFPIMNO2J6UyOoJlut7GP2mmoCT3LECKFWdOV1VZwjpkoxrtkEDM3B3SEBLwE+naSlunQmBg5A==}
@@ -1958,21 +1954,6 @@ packages:
 
   /@sxzz/popperjs-es@2.11.7:
     resolution: {integrity: sha512-Ccy0NlLkzr0Ex2FKvh2X+OyERHXJ88XJ1MXtsI9y9fGexlaXaVTPzBCRBwIxFkORuOb+uBqeu+RqnpgYTEZRUQ==}
-    dev: true
-
-  /@tanstack/table-core@8.11.2:
-    resolution: {integrity: sha512-rR0VEQOtr0ARLvaNLaSQnt2BVwOp0OavOUA0LcZ3N45tLYXc4sXruNv8kJ7R7+5W1CrzGha217tzjBG83CpoMQ==}
-    engines: {node: '>=12'}
-    dev: true
-
-  /@tanstack/vue-table@8.11.2(vue@3.3.13):
-    resolution: {integrity: sha512-xAQA3twDaCLAKYxF3u7mOXTyhD51Rh9lsSqs/CS05auMGV0ajC4+1X7inMjc9uqb7qSaM7T1OUoQlj/kv1raSQ==}
-    engines: {node: '>=12'}
-    peerDependencies:
-      vue: ^3.2.33
-    dependencies:
-      '@tanstack/table-core': 8.11.2
-      vue: 3.3.13
     dev: true
 
   /@trysound/sax@0.2.0:

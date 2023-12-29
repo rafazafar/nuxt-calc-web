@@ -6,7 +6,6 @@
     <h2 class="text-xl mt-4">ElementPlus Table:</h2>
     <TableAchievementsElementTable />
     <h2 class="text-xl mt-4">React Table:</h2>
-    <TableAchievementsReactTable :tableData="first5"/>
   </div>
 </template>
 
