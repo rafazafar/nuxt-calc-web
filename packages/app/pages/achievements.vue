@@ -1,23 +1,37 @@
 <template>
   <div>
-    <PageTitle :title="pageTitle" :description="pageDescription" />
-    <p class="font-semibold text-xl">支給年月: {{ "2022年3月" }}</p>
-    <div class="overflow-x-auto"></div>
-    <h2 class="text-xl mt-4">ElementPlus Table:</h2>
-    <TableAchievementsElementTable />
-    <h2 class="text-xl mt-4">React Table:</h2>
-    <TableAchievementsReactTable :table-data="first5" />
+    <div class="max-w-7xl mx-auto">
+      <PageTitle :title="pageTitle" :description="pageDescription" />
+      <div class="font-semibold text-xl">
+        <p>支給年月: {{ "2022年3月" }}</p>
+      </div>
+      <div class="overflow-x-auto"></div>
+    </div>
+
+    <div class="lg:p-8">
+      <div v-if="pending">
+        <div class="max-w-7xl mx-auto">
+          <span class="loading loading-dots loading-lg"></span>
+        </div>
+      </div>
+      <div v-else class="h-[60vh]">
+        <TableAchievementsElementTable :tableData="first2"/>
+      </div>
+    </div>
   </div>
 </template>
 
 <script setup lang="ts">
+definePageMeta({
+  layout: "full-width",
+});
 const pageTitle = "支給年月別実績一覧照会(営業所長)";
 const pageDescription = "";
 
-const { data, pending, error, refresh, status } = await useFetch<any>(
+const { data, pending, error, refresh, status } = useFetch<any>(
   "/api/achievements",
   { key: "achievementsData" }
 );
 
-const first5 = computed(() => data.value?.slice(0, 5));
+const first2 = computed(() => data.value?.slice(0, 2));
 </script>
