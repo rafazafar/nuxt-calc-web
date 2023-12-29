@@ -1,6 +1,6 @@
 <template>
   <div>
-    <PageTitle :title="pageTitle" :description="pageDescription" />
+    <PageTitle :title="pageTitle" :description="''" />
     <div class="my-4 flex items-center">
       <div class="font-semibold text-xl w-60">支給年月:{{ "2022年3月" }}</div>
       <div class="break-words text-sm font-light">
@@ -15,14 +15,15 @@
       <span class="loading loading-dots loading-lg"></span>
     </div>
     <div v-else class="h-[70vh]">
-      <TableAchievementsElementTable :tableData="data" />
+      <TableCustom :tableData="data" :tableStructure="mockTableStructure" />
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
 const pageTitle = "支給年月別実績一覧照会(営業所長)";
-const pageDescription = "";
+
+const mockTableStructure = useMockData().achievementTableStructure
 
 const { data, pending } = useFetch<any>("/api/achievements", {
   key: "achievementsData",

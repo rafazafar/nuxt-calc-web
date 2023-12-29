@@ -105,7 +105,7 @@
 
       <div :class="{'h-[70vh]': collapsed , 'h-[50vh]': !collapsed}">
         <ClientOnly>
-          <TableAchievementsElementTable :tableData="data"/>
+          <TableCustom :tableData="data" :table-structure="mockTableStructure"/>
         </ClientOnly>
       </div>
     </div>
@@ -116,6 +116,7 @@
 definePageMeta({
   layout: "full-width",
 });
+const mockTableStructure = useMockData().achievementTableStructure;
 const collapsed = ref(false);
 const placeholderHelpMessage =
   "営業管理職の2022年度の保障額は、7月~12月までの期間の保障額になるため、表示金額の50%となります";

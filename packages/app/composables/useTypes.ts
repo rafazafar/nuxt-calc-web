@@ -18,3 +18,11 @@ export type FakestoreRating = {
   rate: number;
   count: number;
 };
+
+export type TableColumn = {
+  label: string;
+  prop?: string;
+  width?: string;
+  fixed?: boolean;
+  columns?: TableColumn[];
+};
