@@ -10,7 +10,7 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
-    "deploy:cloudflare": "rm -rf .output .wrangler && pnpm run build:cloudflare && wrangler deploy --env production"
+    "deploy:cloudflare": "rm -rf .output .wrangler && pnpm run build:cloudflare && wrangler deploy --env dev"
   },
   "devDependencies": {
     "@element-plus/nuxt": "^1.0.7",

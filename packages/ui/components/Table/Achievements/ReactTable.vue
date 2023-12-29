@@ -1,4 +1,4 @@
-<!-- <script setup lang="ts">
+<script setup lang="ts">
 import {
   FlexRender,
   getCoreRowModel,
@@ -123,4 +123,4 @@ const tableGroups = table.getHeaderGroups();
       </tbody>
     </table>
   </div>
-</template> -->
+</template>
