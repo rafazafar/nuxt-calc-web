@@ -158,7 +158,6 @@ defineProps<{
 const { isMobile } = useDevice();
 
 const customHeaderStyle = (data: any): CellStyle<any> => {
-  console.table(data);
   return data.rowIndex == 1
     ? { "background-color": "#f2f6fc", color: "black" }
     : { "background-color": "#4976ba", color: "white" };
