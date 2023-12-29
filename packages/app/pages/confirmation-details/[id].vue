@@ -104,7 +104,9 @@
       </div>
 
       <div :class="{'h-[70vh]': collapsed , 'h-[50vh]': !collapsed}">
-        <TableAchievementsElementTable :tableData="data"/>
+        <ClientOnly>
+          <TableAchievementsElementTable :tableData="data"/>
+        </ClientOnly>
       </div>
     </div>
   </div>
@@ -119,7 +121,7 @@ const placeholderHelpMessage =
   "営業管理職の2022年度の保障額は、7月~12月までの期間の保障額になるため、表示金額の50%となります";
 const id = useRoute().params.id;
 
-const { data, pending } = useFetch<any>(
+const { data } = await useFetch<any>(
   "/api/achievements",
   { key: "achievementsData" }
 );
