@@ -10,15 +10,15 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
-    "deploy:cloudflare": "rm -rf .output .wrangler && pnpm run build:cloudflare && wrangler deploy --env dev"
+    "deploy:cloudflare": "rm -rf .output .wrangler .vercel && NITRO_PRESET=cloudflare nuxt build&& wrangler deploy --env dev"
   },
   "devDependencies": {
     "@element-plus/nuxt": "^1.0.7",
-    "element-plus": "^2.4.4",
     "@nuxt-monorepo/ui": "workspace:^",
     "@nuxt/devtools": "latest",
     "@vueuse/core": "^10.7.0",
     "@vueuse/nuxt": "^10.7.0",
+    "element-plus": "^2.4.4",
     "nuxt": "^3.9.0",
     "nuxt-icon": "^0.6.7",
     "vue": "^3.3.12",

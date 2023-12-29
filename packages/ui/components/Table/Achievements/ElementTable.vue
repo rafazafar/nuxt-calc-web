@@ -6,18 +6,32 @@
     :header-cell-style="customHeaderStyle"
     sum-text="支社合計"
   >
+    <!-- <el-table-column
+    v-for="column in tableStructure.columns"
+    :prop="column.prop"
+    :label="column.label"
+    :width="column.width ?? '100px'"
+    :fixed="column.fixed"
+  >
+    <el-table-column
+      v-for="subColumn in column.columns"
+      :prop="subColumn.prop"
+      :label="subColumn.label"
+      :width="subColumn.width ?? '100px'"
+      :fixed="subColumn.fixed"
+    />
+  </el-table-column> -->
+
     <el-table-column label="社員情報" :fixed="!isMobile">
-      <el-table-column fixed prop="employee.regionName" label="営業局名" />
+      <el-table-column fixed prop="employee.regionName" label="営業局名"/>
       <el-table-column
-        sortable
         min-width="120px"
         fixed
         prop="employee.branchName"
         label="支社名"
       />
-      <el-table-column sortable min-width="120px" prop="" label="社員番号" />
+      <el-table-column min-width="120px" prop="" label="社員番号" />
       <el-table-column
-        sortable
         min-width="120px"
         prop="employee.employeeName"
         label="社員名"
@@ -26,19 +40,16 @@
     </el-table-column>
     <el-table-column>
       <el-table-column
-        sortable
         min-width="120px"
         prop="employee.employeeNo"
         label="社員番号"
       />
       <el-table-column
-        sortable
         min-width="120px"
         prop="employee.evaluationStandardCommission"
         label="業績評価基準額 (年額)"
       />
       <el-table-column
-        sortable
         min-width="120px"
         prop="employee.promisedAnnualCompensation"
         label="最低年収保障 (年間)"
@@ -47,25 +58,21 @@
 
     <el-table-column label="業績評価用:APE(千円)">
       <el-table-column
-        sortable
         min-width="120px"
         prop="performance.annualPremiumEquivalent.budget"
         label="当年度予算"
       />
       <el-table-column
-        sortable
         min-width="120px"
         prop="performance.annualPremiumEquivalent.previousYearResult"
         label="2021年度実績"
       />
       <el-table-column
-        sortable
         min-width="120px"
         prop="performance.annualPremiumEquivalent.result"
         label="当年度実績"
       />
       <el-table-column
-        sortable
         min-width="120px"
         prop="performance.annualPremiumEquivalent.result"
         label="達成率"
@@ -74,25 +81,21 @@
 
     <el-table-column label="業績評価用:KP(千円)">
       <el-table-column
-        sortable
         min-width="120px"
         prop="performance.annualPremiumEquivalent.budget"
         label="当年度予算"
       />
       <el-table-column
-        sortable
         min-width="120px"
         prop="performance.annualPremiumEquivalent.previousYearResult"
         label="2021年度実績"
       />
       <el-table-column
-        sortable
         min-width="120px"
         prop="performance.annualPremiumEquivalent.result"
         label="当年度実績"
       />
       <el-table-column
-        sortable
         min-width="120px"
         prop="performance.annualPremiumEquivalent.result"
         label="達成率"
@@ -101,19 +104,16 @@
 
     <el-table-column label="業績評価用：陣容数">
       <el-table-column
-        sortable
         min-width="120px"
         prop="performance.annualPremiumEquivalent.previousYearResult"
         label="2021年度実績"
       />
       <el-table-column
-        sortable
         min-width="120px"
         prop="performance.annualPremiumEquivalent.result"
         label="当年度実績"
       />
       <el-table-column
-        sortable
         min-width="120px"
         prop="performance.annualPremiumEquivalent.result"
         label="達成率"
@@ -122,25 +122,21 @@
 
     <el-table-column label="成長率・達成率・報酬連動係数(確定)">
       <el-table-column
-        sortable
         min-width="120px"
         prop="performance.annualPremiumEquivalent.result"
         label="前年度繰越 報酬連動係数"
       />
       <el-table-column
-        sortable
         min-width="120px"
         prop="performance.annualPremiumEquivalent.result"
         label="達成率合計"
       />
       <el-table-column
-        sortable
         min-width="120px"
         prop="performance.annualPremiumEquivalent.result"
         label="当年度 報酬連動係数"
       />
       <el-table-column
-        sortable
         min-width="120px"
         prop="performance.annualPremiumEquivalent.result"
         label="入社3年超"
@@ -156,6 +152,125 @@ defineProps<{
   tableData: any[];
 }>();
 const { isMobile } = useDevice();
+
+// There no reason to use abstration as there is no gain in clarity or readability.
+// This is a good example of over abstraction. It's better to just write the code.
+// Abstracting only saves 10% of the code, but it makes it harder to maintain.
+
+// type TableColumn = {
+//   label: string;
+//   prop?: string;
+//   width?: string;
+//   fixed?: boolean;
+//   columns?: TableColumn[];
+// };
+
+// const tableStructure: { columns: TableColumn[] } = {
+//   columns: [
+//     {
+//       label: "社員情報",
+//       fixed: true,
+//       columns: [
+//         {
+//           label: "営業局名",
+//           prop: "employee.regionName",
+//         },
+//         {
+//           label: "支社名",
+//           prop: "employee.branchName",
+//         },
+//         {
+//           label: "社員番号",
+//         },
+//         {
+//           label: "社員名",
+//           prop: "employee.employeeName",
+//           width: "150px",
+//         },
+//       ],
+//     },
+//     {
+//       label: "業績評価用：APE(千円)",
+//       columns: [
+//         {
+//           label: "当年度予算",
+//           prop: "performance.annualPremiumEquivalent.budget",
+//         },
+//         {
+//           label: "2021年度実績",
+//           prop: "performance.annualPremiumEquivalent.previousYearResult",
+//         },
+//         {
+//           label: "当年度実績",
+//           prop: "performance.annualPremiumEquivalent.result",
+//         },
+//         {
+//           label: "達成率",
+//           prop: "performance.annualPremiumEquivalent.result",
+//         },
+//       ],
+//     },
+//     {
+//       label: "業績評価用：KP(千円)",
+//       columns: [
+//         {
+//           label: "当年度予算",
+//           prop: "performance.annualPremiumEquivalent.budget",
+//         },
+//         {
+//           label: "2021年度実績",
+//           prop: "performance.annualPremiumEquivalent.previousYearResult",
+//         },
+//         {
+//           label: "当年度実績",
+//           prop: "performance.annualPremiumEquivalent.result",
+//         },
+//         {
+//           label: "達成率",
+//           prop: "performance.annualPremiumEquivalent.result",
+//         },
+//       ],
+//     },
+//     {
+//       label: "業績評価用：陣容数",
+//       columns: [
+//         {
+//           label: "2021年度実績",
+//           prop: "performance.annualPremiumEquivalent.previousYearResult",
+//         },
+//         {
+//           label: "当年度実績",
+//           prop: "performance.annualPremiumEquivalent.result",
+//         },
+//         {
+//           label: "達成率",
+//           prop: "performance.annualPremiumEquivalent.result",
+//         },
+//       ],
+//     },
+//     {
+//       label: "成長率・達成率・報酬連動係数(確定)",
+//       columns: [
+//         {
+//           label: "前年度繰越 報酬連動係数",
+//           prop: "performance.annualPremiumEquivalent.result",
+//         },
+//         {
+//           label: "達成率合計",
+//           prop: "performance.annualPremiumEquivalent.result",
+//         },
+//         {
+//           label: "当年度 報酬連動係数",
+//           prop: "performance.annualPremiumEquivalent.result",
+//         },
+//         {
+//           label: "入社3年超",
+//           prop: "performance.annualPremiumEquivalent.result",
+//         },
+//       ],
+//     },
+//   ],
+// };
 
 const customHeaderStyle = (data: any): CellStyle<any> => {
   return data.rowIndex == 1

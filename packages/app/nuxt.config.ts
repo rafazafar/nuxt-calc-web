@@ -5,18 +5,18 @@ export default defineNuxtConfig({
   devtools: {
     enabled: true,
   },
-  devServer:{
-    port: 3001
+  devServer: {
+    port: 3001,
   },
-  
+
   modules: ["nuxt-icon", "@vueuse/nuxt"],
   css: ["~/assets/css/main.css"],
-  app:{
+  app: {
     pageTransition: { name: "page", mode: "out-in" },
-    layoutTransition: { name: 'layout', mode: 'out-in' },
-    head:{
+    layoutTransition: { name: "layout", mode: "out-in" },
+    head: {
       titleTemplate: "CCI/FA Calc Nuxt Monorepo",
-    }
+    },
   },
 
   //Sekrets
