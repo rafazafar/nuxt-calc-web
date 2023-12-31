@@ -75,7 +75,10 @@
         </div>
       </div>
 
-      <div class="divider mt-1 divider-accent  cursor-pointer" @click="collapsed = !collapsed">
+      <div
+        class="divider mt-1 divider-accent cursor-pointer"
+        @click="collapsed = !collapsed"
+      >
         <Icon
           :name="
             collapsed
@@ -103,10 +106,8 @@
         </div>
       </div>
 
-      <div :class="{'h-[70vh]': collapsed , 'h-[50vh]': !collapsed}">
-        <ClientOnly>
-          <TableCustom :tableData="data" :table-structure="mockTableStructure"/>
-        </ClientOnly>
+      <div :class="{ 'h-[70vh]': collapsed, 'h-[50vh]': !collapsed }">
+        <TableCustom :tableData="data" :table-structure="mockTableStructure" />
       </div>
     </div>
   </div>
@@ -122,8 +123,7 @@ const placeholderHelpMessage =
   "営業管理職の2022年度の保障額は、7月~12月までの期間の保障額になるため、表示金額の50%となります";
 const id = useRoute().params.id;
 
-const { data } = await useFetch<any>(
-  "/api/achievements",
-  { key: "achievementsData" }
-);
+const { data } = await useFetch<any>("/api/achievements", {
+  key: "achievementsData",
+});
 </script>

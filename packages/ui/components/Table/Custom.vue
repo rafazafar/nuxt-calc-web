@@ -1,27 +1,28 @@
 <template>
-  <el-table
-    :data="tableData"
-    show-summary
-    height="100%"
-    :header-cell-style="customHeaderStyle"
-    sum-text="支社合計"
-  >
-    <el-table-column
-      v-for="column in tableStructure.columns"
-      :prop="column.prop"
-      :label="column.label"
-      :width="column.width ?? columnDefaultWidth"
-      :fixed="column.fixed"
+  <ClientOnly>
+    <el-table
+      :data="tableData"
+      show-summary
+      height="100%"
+      :header-cell-style="customHeaderStyle"
+      sum-text="支社合計"
     >
       <el-table-column
-        v-for="subColumn in column.columns"
-        :prop="subColumn.prop"
-        :label="subColumn.label"
-        :width="subColumn.width ?? columnDefaultWidth"
-        :fixed="subColumn.fixed"
-      />
-    </el-table-column>
-  </el-table>
+        v-for="column in tableStructure.columns"
+        :prop="column.prop"
+        :label="column.label"
+        :width="column.width ?? columnDefaultWidth"
+        :fixed="column.fixed"
+      >
+        <el-table-column
+          v-for="subColumn in column.columns"
+          :prop="subColumn.prop"
+          :label="subColumn.label"
+          :width="subColumn.width ?? columnDefaultWidth"
+          :fixed="subColumn.fixed"
+        />
+      </el-table-column> </el-table
+  ></ClientOnly>
 </template>
 
 <script lang="ts" setup>

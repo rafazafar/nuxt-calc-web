@@ -1,7 +1,7 @@
 <template>
   <div>
     <PageTitle title="支社長・営業所長報酬サポートツール" class="mb-12">
-      <p>
+      <p v-on:mouseleave="stop" v-on:mouseover="play('ログインユーザー別に使用できるメニューを表示しています使用方法など、ご不明な点がある場合は、CCI営業人事Gまでお問い合わせください')">
         ログインユーザー別に使用できるメニューを表示しています<br />
         使用方法など、ご不明な点がある場合は、CCI営業人事Gまでお問い合わせください。
       </p>
@@ -19,6 +19,42 @@
   </div>
 </template>
 <script setup lang="ts">
+
+const voice = useState<SpeechSynthesisVoice>('voice', () => undefined as unknown as SpeechSynthesisVoice)
+const text = ref('Hello, everyone! Good morning!')
+const pitch = ref(1)
+const rate = ref(1)
+
+const speech = useSpeechSynthesis(text, {
+  voice,
+  pitch,
+  rate,
+})
+
+let synth: SpeechSynthesis
+
+const voices = ref<SpeechSynthesisVoice[]>([])
+
+const play = (txt?: string) => {
+  if (txt) {
+    text.value = txt
+  }
+  speech.speak()
+}
+
+const stop = () => {
+  speech.stop()
+}
+onMounted(() => {
+  if (speech.isSupported.value) {
+    setTimeout(() => {
+      synth = window.speechSynthesis
+      voices.value = synth.getVoices()
+      voice.value = voices.value[65]
+    })
+  }
+})
+
 const devMenu = [
   {
     title: "Playground",
@@ -27,20 +63,6 @@ const devMenu = [
     icon: "material-symbols-light:developer-mode-tv",
     buttonText: "Go to Playground",
   },
-  // {
-  //   title: "TSX Page",
-  //   description: "TSX in Vue? Rly? Yes",
-  //   to: "/tsx",
-  //   icon: "material-symbols-light:developer-mode-tv",
-  //   buttonText: "Go to TSX Page",
-  // },
-  // {
-  //   title: "Hyperscript Page",
-  //   description: "Witten in hyperscript. Yukk",
-  //   to: "/hyperscript",
-  //   icon: "material-symbols-light:developer-mode-tv",
-  //   buttonText: "Go to H",
-  // },
 ];
 const businessMenu = [
   {
