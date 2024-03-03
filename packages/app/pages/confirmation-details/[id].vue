@@ -9,17 +9,17 @@
           <p class="p-2 font-semibold">基本情報</p>
           <div class="grid md:grid-cols-6 gap-2">
             <AccentedKV
-              class="col-span-2"
+              class="col-span-6 md:col-span-2"
               label="局"
               value="858 | 関東営業局"
             />
             <AccentedKV
-              class="col-span-2"
+              class="col-span-6 md:col-span-2"
               label="支社"
               value="002 | 東京支社"
             />
             <AccentedKV
-              class="col-span-2"
+              class="col-span-6 md:col-span-2"
               label="社員"
               value="64268070 | AXA 太郎"
             />

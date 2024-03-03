@@ -1,6 +1,6 @@
 <template>
   <div>
-    <NuxtLoadingIndicator />
+    <!-- <NuxtLoadingIndicator /> -->
     <ErrorPopup ref="errorPopup" v-if="useCustomError().isVisible.value" />
     <SiteHeader
       siteTitle="支社長・営業所長報酬サポートツール"
